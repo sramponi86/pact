@@ -1,0 +1,59 @@
+{
+  "consumer": {
+    "name": "Frontend"
+  },
+  "interactions": [
+    {
+      "description": "a request for all clients",
+      "providerState": "i have a list of clients",
+      "request": {
+        "headers": {
+          "Accept": "application/json, text/plain, */*"
+        },
+        "method": "GET",
+        "path": "/clients"
+      },
+      "response": {
+        "body": [
+          {
+            "age": 8,
+            "firstName": "Lisa",
+            "id": 1,
+            "lastName": "Simpson"
+          },
+          {
+            "age": 30,
+            "firstName": "Wonder",
+            "id": 2,
+            "lastName": "Woman"
+          },
+          {
+            "age": 39,
+            "firstName": "Homer",
+            "id": 3,
+            "lastName": "Simpson"
+          }
+        ],
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "11.0.2"
+    },
+    "pactRust": {
+      "ffi": "0.4.0",
+      "models": "1.0.4"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "ClientsService"
+  }
+}
